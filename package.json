@@ -2,9 +2,6 @@
   "name": "create-esc-app",
   "version": "0.0.1",
   "description": "The best way to start a RESTful, typesafe Express.js API.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "create-esc-app",
     "esc-stack",
@@ -13,17 +10,38 @@
   ],
   "author": "Erik S. Carlsten <ecarlste@gmail.com>",
   "type": "module",
+  "exports": "./dist/index.js",
+  "bin": {
+    "create-esc-app": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "template",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist node_modules",
+    "start": "node dist/index.js"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ecarlste/create-esc-app.git"
   },
   "packageManager": "pnpm@10.12.3",
+  "dependencies": {
+    "@clack/prompts": "^0.11.0"
+  },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
     "@types/node": "^24.0.4",
     "eslint": "^9.29.0",
     "prettier": "^3.6.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.35.0"
   }

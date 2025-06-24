@@ -1,0 +1,17 @@
+{
+  "name": "template",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'not implemented yet...'",
+    "build": "echo 'not implemented yet...'",
+    "start": "echo 'not implemented yet...'",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^24.0.4",
+    "typescript": "^5.8.3"
+  }
+}
