@@ -1,0 +1,22 @@
+{
+  "name": "create-esc-app",
+  "version": "0.0.1",
+  "description": "The best way to start a RESTful, typesafe Express.js API.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "create-esc-app",
+    "esc-stack",
+    "express.js",
+    "typescript"
+  ],
+  "author": "Erik S. Carlsten <ecarlste@gmail.com>",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecarlste/create-esc-app.git"
+  },
+  "packageManager": "pnpm@10.12.3"
+}
