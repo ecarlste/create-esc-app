@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { intro, isCancel, outro, text } from "@clack/prompts";
-import { validateAppName } from "./utils/validateAppName";
+import { validateAppName } from "./utils/validateAppName.js";
+import { scaffoldProject } from "./helpers/scaffoldProject.js";
 
 const main = async () => {
   intro(`create-esc-app`);
@@ -14,9 +15,8 @@ const main = async () => {
   if (isCancel(appName)) {
     outro("create-esc-app cancelled...");
   } else {
-    outro(
-      `Your esc-app '${appName.toString()}' hass been successfully created!`,
-    );
+    scaffoldProject({ projectName: appName });
+    outro(`Your esc-app '${appName.toString()}' hass been successfully created!`);
   }
 };
 
@@ -28,9 +28,7 @@ try {
   if (err instanceof Error) {
     console.error(err);
   } else {
-    console.error(
-      "An unknown error has occurred. Please open an issue on github with the text below:",
-    );
+    console.error("An unknown error has occurred. Please open an issue on github with the text below:");
     console.log(err);
     process.exit(1);
   }
